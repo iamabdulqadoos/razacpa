@@ -3,6 +3,7 @@ import "./Home.css";
 
 import Hero from "./components/Hero/Hero";
 import AboutPreview from "./components/AboutPreview/AboutPreview";
+import ServicesPreview from "./components/ServicesPreview/ServicesPreview";
 
 const Home = () => {
     return (
@@ -11,6 +12,8 @@ const Home = () => {
             <Hero />
 
             <AboutPreview />
+
+            <ServicesPreview />
 
         </main>
     );
