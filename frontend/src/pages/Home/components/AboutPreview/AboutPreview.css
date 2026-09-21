@@ -1,0 +1,632 @@
+/* =========================================
+   ABOUT PREVIEW
+========================================= */
+
+.about-preview {
+    width: 100%;
+
+    padding: 110px 0;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.about-preview-container {
+    width: 100%;
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.about-preview-content {
+    max-width: 600px;
+}
+
+
+.about-preview-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.about-preview-title {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 44px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.about-preview-title span {
+    display: block;
+
+    color: #2563eb;
+}
+
+
+.about-preview-description {
+    margin: 22px 0 0;
+
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.about-preview-features {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-top: 32px;
+}
+
+
+.about-preview-feature {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+
+.about-feature-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.about-preview-feature h4 {
+    margin: 2px 0 5px;
+
+    color: #0f172a;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.about-preview-feature p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.about-preview-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 35px;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    background: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.about-preview-button:hover {
+    transform: translateY(-2px);
+
+    background: #1d4ed8;
+
+    box-shadow:
+        0 15px 30px rgba(37, 99, 235, 0.25);
+}
+
+
+.about-preview-button span {
+    font-size: 18px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.about-preview-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   VISUAL
+========================================= */
+
+.about-preview-visual {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.about-preview-main-card {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 390px;
+
+    padding: 30px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    box-shadow:
+        0 30px 70px rgba(15, 23, 42, 0.10);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.about-card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+.about-card-logo {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    background: #2563eb;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.20);
+}
+
+
+.about-card-header strong {
+    display: block;
+
+    color: #0f172a;
+
+    font-size: 17px;
+}
+
+
+.about-card-header span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CARD BODY
+========================================= */
+
+.about-card-body {
+    padding: 45px 0;
+}
+
+
+.about-card-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.about-card-body h3 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 32px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+
+.about-card-body p {
+    max-width: 350px;
+
+    margin: 18px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.about-card-footer {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+
+.about-card-stat strong {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 20px;
+}
+
+
+.about-card-stat span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FLOATING CARDS
+========================================= */
+
+.about-floating-card {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 18px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.12);
+
+    z-index: 3;
+}
+
+
+.about-floating-card span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+.about-floating-card strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #0f172a;
+
+    font-size: 13px;
+}
+
+
+.about-floating-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.about-floating-top {
+    top: 55px;
+
+    right: -15px;
+}
+
+
+.about-floating-bottom {
+    bottom: 55px;
+
+    left: -20px;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .about-preview {
+        padding: 80px 0;
+    }
+
+    .about-preview-container {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .about-preview-content {
+        max-width: 750px;
+
+        margin: 0 auto;
+    }
+
+    .about-preview-title {
+        font-size: 38px;
+    }
+
+    .about-preview-visual {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .about-preview {
+        padding: 65px 0;
+    }
+
+    .about-preview-container {
+        padding: 0 20px;
+
+        gap: 45px;
+    }
+
+    .about-preview-title {
+        font-size: 31px;
+    }
+
+    .about-preview-description {
+        font-size: 15px;
+    }
+
+    .about-preview-features {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .about-preview-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .about-preview-visual {
+        min-height: 430px;
+    }
+
+    .about-preview-main-card {
+        min-height: 350px;
+
+        padding: 22px;
+
+        border-radius: 20px;
+    }
+
+    .about-card-body {
+        padding: 30px 0;
+    }
+
+    .about-card-body h3 {
+        font-size: 26px;
+    }
+
+    .about-floating-top {
+        top: 15px;
+
+        right: -5px;
+    }
+
+    .about-floating-bottom {
+        bottom: 15px;
+
+        left: -5px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .about-preview-container {
+        padding: 0 15px;
+    }
+
+    .about-preview-title {
+        font-size: 28px;
+    }
+
+    .about-preview-main-card {
+        padding: 18px;
+    }
+
+    .about-card-body h3 {
+        font-size: 23px;
+    }
+
+    .about-floating-card {
+        padding: 12px;
+    }
+}
