@@ -1,39 +1,59 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../services/api";
-import "./blog.css";
+import "./Blog.css";
 
 function Blog() {
-
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
 
     useEffect(() => {
+        const fetchBlogs = async () => {
+            try {
+                const response = await api.get("/blogs/");
 
-        api.get("/blogs/")
-            .then((response) => {
                 setBlogs(response.data);
-                setLoading(false);
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error("Error fetching blogs:", error);
-                setLoading(false);
-            });
 
+                setError(
+                    "Unable to load blogs. Please try again later."
+                );
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchBlogs();
     }, []);
 
+    // Loading
     if (loading) {
         return (
             <div className="blog-loading">
-                Loading blogs...
+                <div className="loading-spinner"></div>
+                <p>Loading blogs...</p>
+            </div>
+        );
+    }
+
+    // Error
+    if (error) {
+        return (
+            <div className="blog-error">
+                <h2>Something went wrong</h2>
+                <p>{error}</p>
             </div>
         );
     }
 
     return (
-        <div className="blog-page">
+        <main className="blog-page">
 
-            {/* Hero Section */}
+            {/* =========================
+                HERO SECTION
+            ========================== */}
 
             <section className="blog-hero">
 
@@ -57,7 +77,9 @@ function Blog() {
             </section>
 
 
-            {/* Blog Section */}
+            {/* =========================
+                BLOG SECTION
+            ========================== */}
 
             <section className="blog-section">
 
@@ -75,20 +97,41 @@ function Blog() {
                             </h2>
                         </div>
 
+                        <p>
+                            Stay informed with our latest accounting,
+                            tax, and business insights.
+                        </p>
+
                     </div>
 
+
+                    {/* =========================
+                        NO BLOGS
+                    ========================== */}
 
                     {blogs.length === 0 ? (
 
                         <div className="no-blogs">
-                            <h3>No blogs available</h3>
+
+                            <div className="no-blogs-icon">
+                                📝
+                            </div>
+
+                            <h3>
+                                No blogs available
+                            </h3>
 
                             <p>
                                 Check back soon for our latest articles.
                             </p>
+
                         </div>
 
                     ) : (
+
+                        /* =========================
+                           BLOG GRID
+                        ========================== */
 
                         <div className="blog-grid">
 
@@ -99,44 +142,92 @@ function Blog() {
                                     key={blog.id}
                                 >
 
-                                    {blog.featured_image && (
-                                        <img
-                                            src={blog.featured_image}
-                                            alt={blog.title}
-                                            className="blog-image"
-                                        />
-                                    )}
+                                    {/* IMAGE */}
+
+                                    <div className="blog-image-wrapper">
+
+                                        {blog.featured_image ? (
+
+                                            <img
+                                                src={blog.featured_image}
+                                                alt={blog.title}
+                                                className="blog-image"
+                                            />
+
+                                        ) : (
+
+                                            <div className="blog-image-placeholder">
+                                                <span>RAZA CPA</span>
+                                            </div>
+
+                                        )}
+
+                                    </div>
+
+
+                                    {/* CONTENT */}
 
                                     <div className="blog-content">
 
+                                        {/* CATEGORY */}
+
                                         {blog.category && (
+
                                             <span className="blog-category">
                                                 {blog.category.name}
                                             </span>
+
                                         )}
 
-                                        <h3>
+
+                                        {/* TITLE */}
+
+                                        <h3 className="blog-title">
+
                                             {blog.title}
+
                                         </h3>
 
-                                        <p>
+
+                                        {/* EXCERPT */}
+
+                                        <p className="blog-excerpt">
+
                                             {blog.excerpt}
+
                                         </p>
+
+
+                                        {/* FOOTER */}
 
                                         <div className="blog-footer">
 
-                                            <span>
+                                            <span className="blog-date">
+
                                                 {blog.published_at
                                                     ? new Date(
                                                         blog.published_at
-                                                    ).toLocaleDateString()
-                                                    : ""
+                                                    ).toLocaleDateString(
+                                                        "en-US",
+                                                        {
+                                                            year: "numeric",
+                                                            month: "short",
+                                                            day: "numeric",
+                                                        }
+                                                    )
+                                                    : "Recently"
                                                 }
+
                                             </span>
 
-                                            <button>
-                                                Read More →
-                                            </button>
+
+                                            <Link
+                                                to={`/blog/${blog.slug}`}
+                                                className="read-more"
+                                            >
+                                                Read More
+                                                <span>→</span>
+                                            </Link>
 
                                         </div>
 
@@ -154,7 +245,7 @@ function Blog() {
 
             </section>
 
-        </div>
+        </main>
     );
 }
 
