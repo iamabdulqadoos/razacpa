@@ -1,10 +1,11 @@
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home/Home";
-import Blog from "./pages/blog";
 
 function App() {
     return (
@@ -19,12 +20,9 @@ function App() {
                     element={<Home />}
                 />
 
-                <Route
-                    path="/blog"
-                    element={<Blog />}
-                />
-
             </Routes>
+
+            <Footer />
 
         </BrowserRouter>
     );
