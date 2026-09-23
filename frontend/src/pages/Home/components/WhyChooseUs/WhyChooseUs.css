@@ -1,0 +1,541 @@
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.why-choose-us {
+    position: relative;
+
+    width: 100%;
+
+    padding: 130px 0;
+
+    background: #f8fafc;
+
+    overflow: hidden;
+}
+
+.why-choose-us-container {
+    width: 100%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 0 30px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.why-choose-us-header {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.7fr;
+
+    align-items: end;
+
+    gap: 100px;
+
+    margin-bottom: 75px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.why-choose-us-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+}
+
+.why-choose-us-label::before {
+    content: "";
+
+    width: 30px;
+
+    height: 1px;
+
+    background: #2563eb;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.why-choose-us-heading h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 54px;
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+.why-choose-us-heading h2 span {
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.why-choose-us-intro {
+    max-width: 390px;
+
+    padding-bottom: 5px;
+}
+
+.why-choose-us-intro p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   REASONS LIST
+========================================= */
+
+.why-choose-us-list {
+    width: 100%;
+
+    border-top: 1px solid #dbe3ed;
+}
+
+
+/* =========================================
+   REASON ROW
+========================================= */
+
+.why-reason {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr 60px;
+
+    align-items: center;
+
+    gap: 35px;
+
+    min-height: 180px;
+
+    padding: 30px 10px;
+
+    border-bottom: 1px solid #dbe3ed;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.35s ease,
+        padding 0.35s ease;
+}
+
+
+/* =========================================
+   ROW HOVER
+========================================= */
+
+.why-reason:hover {
+    padding-left: 30px;
+
+    padding-right: 30px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.why-reason-number {
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        color 0.3s ease;
+}
+
+.why-reason:hover .why-reason-number {
+    color: #0f172a;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.why-reason-content {
+    max-width: 720px;
+}
+
+.why-reason-content h3 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 25px;
+
+    line-height: 1.25;
+
+    font-weight: 650;
+
+    letter-spacing: -0.5px;
+}
+
+.why-reason-content p {
+    max-width: 700px;
+
+    margin: 12px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.why-reason-arrow {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #dbe3ed;
+
+    border-radius: 50%;
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.why-reason:hover .why-reason-arrow {
+    color: #ffffff;
+
+    background: #0f172a;
+
+    border-color: #0f172a;
+
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   BOTTOM STATEMENT
+========================================= */
+
+.why-choose-us-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-top: 35px;
+}
+
+.why-choose-us-bottom span {
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.why-choose-us-bottom p {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .why-choose-us {
+        padding: 100px 0;
+    }
+
+    .why-choose-us-header {
+        gap: 50px;
+    }
+
+    .why-choose-us-heading h2 {
+        font-size: 45px;
+    }
+
+    .why-reason {
+        grid-template-columns: 70px 1fr 55px;
+
+        gap: 25px;
+    }
+}
+
+
+/* =========================================
+   MOBILE TABLET
+========================================= */
+
+@media (max-width: 750px) {
+
+    .why-choose-us {
+        padding: 80px 0;
+    }
+
+    .why-choose-us-container {
+        padding: 0 20px;
+    }
+
+
+    /* Header */
+
+    .why-choose-us-header {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+        margin-bottom: 50px;
+    }
+
+    .why-choose-us-heading h2 {
+        font-size: 38px;
+
+        letter-spacing: -1.2px;
+    }
+
+    .why-choose-us-intro {
+        max-width: 600px;
+    }
+
+
+    /* Rows */
+
+    .why-reason {
+        grid-template-columns: 45px 1fr 45px;
+
+        gap: 15px;
+
+        min-height: 170px;
+
+        padding: 25px 5px;
+    }
+
+    .why-reason:hover {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+    .why-reason-content h3 {
+        font-size: 21px;
+    }
+
+    .why-reason-content p {
+        font-size: 13px;
+    }
+
+    .why-reason-arrow {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+
+    /* Bottom */
+
+    .why-choose-us-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .why-choose-us {
+        padding: 70px 0;
+    }
+
+    .why-choose-us-container {
+        padding: 0 20px;
+    }
+
+    .why-choose-us-label {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .why-choose-us-heading h2 {
+        font-size: 33px;
+
+        letter-spacing: -1px;
+    }
+
+    .why-choose-us-intro p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    /* Reason */
+
+    .why-reason {
+        grid-template-columns: 35px 1fr;
+
+        gap: 15px;
+
+        min-height: auto;
+
+        padding: 25px 0;
+    }
+
+    .why-reason:hover {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+    .why-reason-number {
+        align-self: start;
+
+        padding-top: 3px;
+
+        font-size: 10px;
+    }
+
+    .why-reason-content h3 {
+        font-size: 20px;
+    }
+
+    .why-reason-content p {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+    .why-reason-arrow {
+        display: none;
+    }
+
+
+    /* Bottom */
+
+    .why-choose-us-bottom {
+        padding-top: 25px;
+    }
+
+    .why-choose-us-bottom span {
+        font-size: 9px;
+    }
+
+    .why-choose-us-bottom p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .why-choose-us {
+        padding: 60px 0;
+    }
+
+    .why-choose-us-container {
+        padding: 0 15px;
+    }
+
+    .why-choose-us-heading h2 {
+        font-size: 30px;
+    }
+
+    .why-reason-content h3 {
+        font-size: 18px;
+    }
+
+    .why-reason-content p {
+        font-size: 12.5px;
+    }
+}

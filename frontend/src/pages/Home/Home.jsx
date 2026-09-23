@@ -4,6 +4,7 @@ import "./Home.css";
 import Hero from "./components/Hero/Hero";
 import AboutPreview from "./components/AboutPreview/AboutPreview";
 import ServicesPreview from "./components/ServicesPreview/ServicesPreview";
+import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 
 const Home = () => {
     return (
@@ -14,6 +15,8 @@ const Home = () => {
             <AboutPreview />
 
             <ServicesPreview />
+
+            <WhyChooseUs />
 
         </main>
     );
